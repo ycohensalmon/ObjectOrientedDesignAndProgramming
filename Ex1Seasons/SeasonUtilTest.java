@@ -1,4 +1,4 @@
-package Ex1;
+package Ex1Seasons;
 
 import java.util.Random;
 import java.util.Scanner;

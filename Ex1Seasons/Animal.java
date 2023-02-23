@@ -1,3 +1,5 @@
+package Ex1Seasons;
+
 import java.lang.Math;
 
 public abstract class Animal implements Seasonable,Comparable{
@@ -34,10 +36,10 @@ public abstract class Animal implements Seasonable,Comparable{
     @Override
     public void changeSeason(){
         switch(season){
-            case FALL -> season = Season.WINTER;
-            case SPRING -> season = Season.SUMMER;
-            case SUMMER -> season = Season.FALL;
-            case WINTER -> season = Season.SPRING;
+            case Season.FALL -> season = Season.WINTER;
+            case Season.SPRING -> season = Season.SUMMER;
+            case Season.SUMMER -> season = Season.FALL;
+            case Season.WINTER -> season = Season.SPRING;
         }
     }
 

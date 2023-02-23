@@ -1,5 +1,7 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+package Ex1Seasons;
+
+import Ex1Seasons.Season;
+import Ex1Seasons.Seasonable;
 
 public class SeasonUtil {
     public static final Season[] SEASONS = Season.values();

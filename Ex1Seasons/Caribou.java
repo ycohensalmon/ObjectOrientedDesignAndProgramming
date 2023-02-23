@@ -1,3 +1,8 @@
+package Ex1Seasons;
+
+import Ex1Seasons.Animal;
+import Ex1Seasons.Color;
+
 public class Caribou extends Animal {
 
     Caribou(int weight, Season season) {
@@ -7,7 +12,7 @@ public class Caribou extends Animal {
     private static Color calcColor(Season s){
         Color c;
         switch (s){
-            case WINTER -> c = Color.WHITE;
+            case Season.WINTER -> c = Color.WHITE;
             default -> c = Color.BROWN;
         }
         return c;
@@ -15,7 +20,7 @@ public class Caribou extends Animal {
 
     @Override
     public String toString() {
-        return "Caribou: " + msg + toString();
+        return "Ex1Seasons.Caribou: " + msg + toString();
     }
 
     @Override

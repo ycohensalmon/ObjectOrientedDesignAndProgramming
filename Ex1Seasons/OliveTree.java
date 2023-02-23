@@ -1,15 +1,19 @@
+package Ex1Seasons;
+
+import Ex1Seasons.Color;
+
 public class OliveTree extends Tree {
 
 
     OliveTree(int height, Season season) {
-        super(height,season,Color.GREEN);
+        super(height,season, Color.GREEN);
     }
 
     @Override
     public String toString() {
         String msg = "Olive tree. ";
         switch (getCurrentSeason()) {
-            case SUMMER ->  msg += "I give fruit. ";
+            case Season.SUMMER ->  msg += "I give fruit. ";
             default ->      msg += toString();
         }
         return msg;
@@ -18,16 +22,16 @@ public class OliveTree extends Tree {
     public void changeSeason() {
         changeSeason();
         switch (getCurrentSeason()){
-            case WINTER: {
+            case Season.WINTER: {
                 setHeight(height * 1.05);
             }
-            case SUMMER: {
+            case Season.SUMMER: {
                 setHeight(height * 1.1);
             }
-            case SPRING: {
+            case Season.SPRING: {
                 setHeight(height * 1.1);
             }
-            case FALL: {
+            case Season.FALL: {
                 setHeight(height * 1.05);
             }
         }

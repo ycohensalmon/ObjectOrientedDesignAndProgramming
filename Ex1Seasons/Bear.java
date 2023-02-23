@@ -1,6 +1,11 @@
+package Ex1Seasons;
+
+import Ex1Seasons.Animal;
+import Ex1Seasons.Color;
+
 public class Bear extends Animal {
     Bear(int weight, Season season) {
-        super(weight,season,Color.BROWN);
+        super(weight,season, Color.BROWN);
     }
 
     @Override
@@ -8,19 +13,19 @@ public class Bear extends Animal {
         changeSeason();
         Season season = getCurrentSeason();
         switch(season){
-            case SUMMER: {
+            case Season.SUMMER: {
                 setWeight(weight * (1 + 1/3));
                 msg = "";
             }
-            case SPRING: {
+            case Season.SPRING: {
                 setWeight(weight *= 0.75);
                 msg = "";
             }
-            case FALL: {
+            case Season.FALL: {
                 setWeight(weight *= 1.25);
                 msg = "";
             }
-            case WINTER: {
+            case Season.WINTER: {
                 setWeight((weight * 0.8));
                 msg = " I am sleeping. ";
             }
@@ -30,6 +35,6 @@ public class Bear extends Animal {
 
     @Override
     public String toString() {
-        return "Bear. " + msg + toString();
+        return "Ex1Seasons.Bear. " + msg + toString();
     }
 }
