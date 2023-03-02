@@ -10,12 +10,7 @@ public class Caribou extends Animal {
     }
 
     private static Color calcColor(Season s){
-        Color c;
-        switch (s){
-            case Season.WINTER -> c = Color.WHITE;
-            default -> c = Color.BROWN;
-        }
-        return c;
+        return (s == Season.WINTER) ? Color.WHITE : Color.BROWN;
     }
 
     @Override

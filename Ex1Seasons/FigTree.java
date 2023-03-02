@@ -12,8 +12,8 @@ public class FigTree extends Tree {
     private static Color calcColor(Season s){
         Color c;
         switch (s){
-            case Season.FALL -> c = Color.YELLOW;
-            case Season.WINTER -> c = null;
+            case FALL -> c = Color.YELLOW;
+            case WINTER -> c = null;
             default -> c = Color.GREEN;
         }
         return c;
@@ -23,8 +23,8 @@ public class FigTree extends Tree {
     public String toString() {
         String msg = "Fig tree. ";
         switch (getCurrentSeason()) {
-            case Season.WINTER ->  msg += toString() + "and I have no leaves";
-            case Season.SUMMER ->  msg += "I give fruit. ";
+            case WINTER ->  msg += toString() + "and I have no leaves";
+            case SUMMER ->  msg += "I give fruit. ";
             default ->      msg += toString();
         }
         return msg;
@@ -33,19 +33,19 @@ public class FigTree extends Tree {
     public void changeSeason() {
         changeSeason();
         switch (getCurrentSeason()){
-            case Season.WINTER: {
+            case WINTER: {
                 setHeight(height * 1.2);
                 leavesColor = null;
             }
-            case Season.SUMMER: {
+            case SUMMER: {
                 setHeight(height * 1.3);
                 leavesColor = null;
             }
-            case Season.SPRING: {
+            case SPRING: {
                 setHeight(height * 1.3);
                 leavesColor = Color.GREEN;
             }
-            case Season.FALL: {
+            case FALL: {
                 setHeight(height * 1.2);
                 leavesColor = Color.YELLOW;
             }

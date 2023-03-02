@@ -13,19 +13,19 @@ public class Bear extends Animal {
         changeSeason();
         Season season = getCurrentSeason();
         switch(season){
-            case Season.SUMMER: {
-                setWeight(weight * (1 + 1/3));
+            case SUMMER: {
+                setWeight(weight * (1 + 1/3.0));
                 msg = "";
             }
-            case Season.SPRING: {
+            case SPRING: {
                 setWeight(weight *= 0.75);
                 msg = "";
             }
-            case Season.FALL: {
+            case FALL: {
                 setWeight(weight *= 1.25);
                 msg = "";
             }
-            case Season.WINTER: {
+            case WINTER: {
                 setWeight((weight * 0.8));
                 msg = " I am sleeping. ";
             }

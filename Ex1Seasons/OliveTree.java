@@ -13,7 +13,7 @@ public class OliveTree extends Tree {
     public String toString() {
         String msg = "Olive tree. ";
         switch (getCurrentSeason()) {
-            case Season.SUMMER ->  msg += "I give fruit. ";
+            case SUMMER ->  msg += "I give fruit. ";
             default ->      msg += toString();
         }
         return msg;
@@ -22,16 +22,16 @@ public class OliveTree extends Tree {
     public void changeSeason() {
         changeSeason();
         switch (getCurrentSeason()){
-            case Season.WINTER: {
+            case WINTER: {
                 setHeight(height * 1.05);
             }
-            case Season.SUMMER: {
+            case SUMMER: {
                 setHeight(height * 1.1);
             }
-            case Season.SPRING: {
+            case SPRING: {
                 setHeight(height * 1.1);
             }
-            case Season.FALL: {
+            case FALL: {
                 setHeight(height * 1.05);
             }
         }
