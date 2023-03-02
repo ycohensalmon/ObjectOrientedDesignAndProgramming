@@ -8,7 +8,6 @@ public abstract class Animal implements Seasonable,Comparable{
     protected Color color;
 
     protected String msg = "";
-    // TODO: Add auxiliary fields and functions.
 
     public void setWeight(double w){
         this.weight = (int) Math.round(w);
@@ -36,10 +35,10 @@ public abstract class Animal implements Seasonable,Comparable{
     @Override
     public void changeSeason(){
         switch(season){
-            case Season.FALL -> season = Season.WINTER;
-            case Season.SPRING -> season = Season.SUMMER;
-            case Season.SUMMER -> season = Season.FALL;
-            case Season.WINTER -> season = Season.SPRING;
+            case FALL -> season = Season.WINTER;
+            case SPRING -> season = Season.SUMMER;
+            case SUMMER -> season = Season.FALL;
+            case WINTER -> season = Season.SPRING;
         }
     }
 

@@ -23,15 +23,15 @@ public class FigTree extends Tree {
     public String toString() {
         String msg = "Fig tree. ";
         switch (getCurrentSeason()) {
-            case WINTER ->  msg += toString() + "and I have no leaves";
+            case WINTER ->  msg += super.toString() + "and I have no leaves";
             case SUMMER ->  msg += "I give fruit. ";
-            default ->      msg += toString();
+            default ->      msg += super.toString();
         }
         return msg;
     }
     @Override
     public void changeSeason() {
-        changeSeason();
+        super.changeSeason();
         switch (getCurrentSeason()){
             case WINTER: {
                 setHeight(height * 1.2);

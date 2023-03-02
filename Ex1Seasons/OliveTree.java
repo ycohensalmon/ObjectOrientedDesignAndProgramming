@@ -13,14 +13,14 @@ public class OliveTree extends Tree {
     public String toString() {
         String msg = "Olive tree. ";
         switch (getCurrentSeason()) {
-            case SUMMER ->  msg += "I give fruit. ";
-            default ->      msg += toString();
+            case FALL ->  msg += "I give fruit. " + super.toString();
+            default ->      msg += super.toString();
         }
         return msg;
     }
     @Override
     public void changeSeason() {
-        changeSeason();
+        super.changeSeason();
         switch (getCurrentSeason()){
             case WINTER: {
                 setHeight(height * 1.05);

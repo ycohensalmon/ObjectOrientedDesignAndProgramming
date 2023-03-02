@@ -15,12 +15,12 @@ public class Caribou extends Animal {
 
     @Override
     public String toString() {
-        return "Ex1Seasons.Caribou: " + msg + toString();
+        return "Caribou: " + msg + super.toString();
     }
 
     @Override
     public void changeSeason() {
-        changeSeason();
+        super.changeSeason();
         switch (getCurrentSeason()){
             case SPRING: {
                 color = Color.BROWN;

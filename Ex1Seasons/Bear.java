@@ -10,7 +10,7 @@ public class Bear extends Animal {
 
     @Override
     public void changeSeason() {
-        changeSeason();
+        super.changeSeason();
         Season season = getCurrentSeason();
         switch(season){
             case SUMMER: {
@@ -35,6 +35,6 @@ public class Bear extends Animal {
 
     @Override
     public String toString() {
-        return "Ex1Seasons.Bear. " + msg + toString();
+        return "Bear. " + msg + super.toString();
     }
 }
