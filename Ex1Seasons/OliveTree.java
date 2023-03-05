@@ -12,28 +12,24 @@ public class OliveTree extends Tree {
     @Override
     public String toString() {
         String msg = "Olive tree. ";
-        switch (getCurrentSeason()) {
-            case FALL ->  msg += "I give fruit. " + super.toString();
-            default ->      msg += super.toString();
+        if (getCurrentSeason() == Season.FALL) {
+            msg += "I give fruit. " + super.toString();
+        } else {
+            msg += super.toString();
         }
         return msg;
     }
     @Override
     public void changeSeason() {
         super.changeSeason();
-        switch (getCurrentSeason()){
-            case WINTER: {
-                setHeight(height * 1.05);
-            }
-            case SUMMER: {
-                setHeight(height * 1.1);
-            }
-            case SPRING: {
-                setHeight(height * 1.1);
-            }
-            case FALL: {
-                setHeight(height * 1.05);
-            }
+        if (getCurrentSeason() == Season.WINTER) {
+            setHeight(height + 5);
+        } else if (getCurrentSeason() == Season.SUMMER) {
+            setHeight(height + 10);
+        } else if (getCurrentSeason() == Season.SPRING) {
+            setHeight(height + 10);
+        } else if (getCurrentSeason() == Season.FALL) {
+            setHeight(height + 5);
         }
     }
 }

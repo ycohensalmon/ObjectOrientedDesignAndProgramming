@@ -18,11 +18,14 @@ public abstract class Tree implements Comparable, Seasonable {
 
     @Override
     public void changeSeason(){
-        switch(season){
-            case FALL -> season = Season.WINTER;
-            case SPRING -> season = Season.SUMMER;
-            case SUMMER -> season = Season.FALL;
-            case WINTER -> season = Season.SPRING;
+        if (season == Season.FALL) {
+            season = Season.WINTER;
+        } else if (season == Season.SPRING) {
+            season = Season.SUMMER;
+        } else if (season == Season.SUMMER) {
+            season = Season.FALL;
+        } else if (season == Season.WINTER) {
+            season = Season.SPRING;
         }
     }
 
@@ -33,7 +36,9 @@ public abstract class Tree implements Comparable, Seasonable {
 
     @Override
     public int compareTo(Object o) {
-        if (this.height == ((Tree)o).height)
+        if (this.height < ((Tree)o).height)
+            return -1;
+        else if (this.height > ((Tree)o).height)
             return 1;
         else
             return 0;
